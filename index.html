@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voltora - Web Development Agency</title>
+
+    
+
+    <!-- Bootstrap CSS (as before) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Your stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Small inline tweaks -->
+    <style>
+      /* Smooth anchor scrolling */
+      html { scroll-behavior: smooth; }
+
+      /* optional: ensure AOS animations play nicely with transform-based layouts */
+      [data-aos] { will-change: transform, opacity; }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar" data-aos="fade-down" data-aos-duration="900">
+      <div class="logo"><img src="/img/logo.png" alt="" /></div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#featured-projects">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <a href="#contact"><button class="login-btn">Contact Us</button></a>
+    </nav>
+
+    <!-- Hero Section (no AOS here as requested) -->
+  <section class="hero">
+    <div class="inner">
+      <div class="row align-items-center">
+        <!-- LEFT -->
+        <div class="col-lg-7 hero-left">
+          <!-- Big headline with inline avatar span -->
+          <h1 class="hero-title">
+            From idea to launch
+            <span style="display:block;">— we create
+              <span class="headline-inline" aria-hidden="true">
+                <!-- replace this image with your small avatar span (inline avatars) -->
+                <img src="/img/span.png" alt="avatars" />
+              </span>
+              websites that connect, convert, and inspire.
+            </span>
+          </h1>
+
+          <!-- CTA + Stats -->
+          <div class="cta-row">
+            <div class="d-flex align-items-center gap-3 flex-wrap">
+              <button class="btn btn-orange">View Projects</button>
+            </div>
+
+            <div class="d-flex align-items-center gap-4 flex-wrap" style="margin-left:6px;">
+              <div class="stat">
+                <div class="num">50+</div>
+                <div class="label">Projects Completed</div>
+              </div>
+
+              <div style="width:18px"></div> <!-- small spacer -->
+
+              <div class="stat">
+                <div class="num">100%</div>
+                <div class="label">Client Satisfaction</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Green services card -->
+          <div class="green-card">
+            <button class="green-pill">Custom Websites</button>
+            <button class="green-pill">SEO & Branding</button>
+            <button class="green-pill">E-Commerce Solutions</button>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="col-lg-5 hero-right text-end">
+          <!-- replace the src below with your large hero image filename -->
+          <img src="/img/hero.png" alt="Team illustration" class="hero-art" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+    <!-- ===== About Us (matches your reference) ===== -->
+    <section class="about container-xl" id="about"
+             data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+      <div class="about-header" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+        <span class="about-chip">About us</span>
+        <h2>
+          Our mission is to help businesses grow with websites that are fast,
+          bold, and conversion-driven.
+        </h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Column 1 -->
+        <article class="about-col" data-aos="zoom-in" data-aos-delay="140" data-aos-duration="900">
+          <div class="about-tile tile-red" id="tile-red">
+            <span class="tile-badge">Our Mission</span>
+            <!-- Illustration area — replace with your PNG/SVG -->
+            <img
+              src="/img/about1.png"
+              alt="Mission Illustration"
+              class="tile-illustration"
+            />
+            <button class="tile-cta" aria-label="Learn more">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 12h8M12 8l4 4-4 4"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="about-text">
+            <h3>We build sites that turn clicks into clients</h3>
+            <p>
+              Voltora crafts high-performing, SEO-ready websites that load fast,
+              tell your story, and convert visitors into leads.
+            </p>
+          </div>
+        </article>
+
+        <!-- Column 2 -->
+        <article class="about-col" data-aos="zoom-in" data-aos-delay="220" data-aos-duration="900">
+          <div class="about-tile tile-orange">
+            <span class="tile-badge">Our Expertise</span>
+            <img
+              src="/img/about2.png"
+              alt="Expertise Illustration"
+              class="tile-illustration"
+            />
+          </div>
+          <div class="about-text">
+            <h3>Full-stack web, SEO & e-commerce</h3>
+            <p>
+              We ship modern stacks (React/Next, Shopify, WordPress, headless)
+              with clean code, accessibility, and Core Web Vitals in mind.
+            </p>
+          </div>
+        </article>
+
+        <!-- Column 3 -->
+        <article class="about-col" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="900">
+          <div class="about-tile tile-green">
+            <span class="tile-badge">Our Approach</span>
+            <img
+              src="/img/about3.png"
+              alt="Approach Illustration"
+              class="tile-illustration"
+            />
+          </div>
+          <div class="about-text">
+            <h3>Design + strategy, not just pixels</h3>
+            <p>
+              We pair thoughtful UX/UI with data-driven decisions—A/B tests,
+              heatmaps, and funnels—to improve outcomes month over month.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section class="services container-xl" id="services"
+             data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+      <div class="services-header" data-aos="fade-right" data-aos-delay="100" data-aos-duration="900">
+        <span class="about-chip">Services</span>
+        <h2>What we build to move your business forward</h2>
+      </div>
+
+      <div class="services-grid">
+        <!-- 1 -->
+        <article class="service-card" data-aos="flip-left" data-aos-delay="140" data-aos-duration="900">
+          <div class="service-tile tile-indigo">
+            <span class="tile-badge">Development</span>
+
+            <!-- Use this image instead of the icon by adding 'use-image' to .service-tile -->
+            <img
+              class="tile-img"
+              src="/img/services/dev.png"
+              alt="Custom Development"
+            />
+
+            <!-- Default icon -->
+            <svg
+              class="tile-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M16 18l6-6-6-6"></path>
+              <path d="M8 6L2 12l6 6"></path>
+            </svg>
+          </div>
+          <div class="service-text">
+            <h3>Custom Website Development</h3>
+            <ul class="service-bullets">
+              <li>Responsive UI & accessibility</li>
+              <li>Next.js / WordPress / Headless CMS</li>
+              <li>Core Web Vitals A-grade</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="service-card" data-aos="flip-left" data-aos-delay="220" data-aos-duration="900">
+          <div class="service-tile tile-teal">
+            <span class="tile-badge">Design</span>
+
+            <img
+              class="tile-img"
+              src="/img/services/design.png"
+              alt="UX/UI Design"
+            />
+
+            <svg
+              class="tile-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+              <path d="M18 13l-6-6"></path>
+              <path d="M2 7l6-3 3 3-3 6L2 7z"></path>
+            </svg>
+          </div>
+          <div class="service-text">
+            <h3>UX/UI & Brand Systems</h3>
+            <ul class="service-bullets">
+              <li>Design systems & components</li>
+              <li>Wireframes, prototypes, micro-interactions</li>
+              <li>Content-first, conversion-ready layouts</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="service-card" data-aos="flip-left" data-aos-delay="300" data-aos-duration="900">
+          <div class="service-tile tile-plum">
+            <span class="tile-badge">SEO</span>
+
+            <img class="tile-img" src="/img/services/seo.png" alt="SEO" />
+
+            <svg
+              class="tile-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="M21 21l-4.35-4.35"></path>
+            </svg>
+          </div>
+          <div class="service-text">
+            <h3>Technical SEO & Content</h3>
+            <ul class="service-bullets">
+              <li>Schema, sitemaps, and clean IA</li>
+              <li>Lightning-fast performance</li>
+              <li>Keyword-driven content & blogs</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="service-card" data-aos="flip-left" data-aos-delay="380" data-aos-duration="900">
+          <div class="service-tile tile-slate">
+            <span class="tile-badge">Care</span>
+
+            <img
+              class="tile-img"
+              src="/img/services/care.png"
+              alt="Maintenance & Support"
+            />
+
+            <svg
+              class="tile-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 10a9 9 0 1 1-6.219-8.56"></path>
+              <path d="M22 2l-10 12-3-3"></path>
+            </svg>
+          </div>
+          <div class="service-text">
+            <h3>Maintenance & Support</h3>
+            <ul class="service-bullets">
+              <li>Updates, security & uptime</li>
+              <li>Backups and SLA support</li>
+              <li>New pages & feature rollouts</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <div class="services-cta" data-aos="zoom-in" data-aos-delay="520" data-aos-duration="900">
+        <a href="#contact" class="btn-orange">Get a free proposal</a>
+      </div>
+    </section>
+
+    <!-- ===== Why Choose Us (bullet-style) ===== -->
+    <section class="why-choose container-xl"
+             data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+      <div class="why-inner">
+        <!-- LEFT: heading + bullets -->
+        <div class="why-content" data-aos="fade-right" data-aos-duration="900" data-aos-delay="100">
+          <span class="about-chip">Why choose us</span>
+
+          <h2 class="why-title">
+            Built for growth — design, performance & results
+          </h2>
+
+          <p class="why-sub">
+            We combine fast engineering, thoughtful design and data-driven strategy to build websites that
+            rank, convert and scale.
+          </p>
+
+          <ul class="why-list" role="list">
+            <li class="why-item" data-aos="fade-up" data-aos-delay="160">
+              <div class="why-dot dot-amber" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <div class="why-copy">
+                <strong class="why-item-title">Performance-first</strong>
+                <p class="muted">Optimised for Core Web Vitals and real user experience — fast pages that convert.</p>
+              </div>
+            </li>
+
+            <li class="why-item" data-aos="fade-up" data-aos-delay="240">
+              <div class="why-dot dot-teal" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <div class="why-copy">
+                <strong class="why-item-title">SEO & discoverability</strong>
+                <p class="muted">Technical SEO, structured content and schema so search engines can find and rank you.</p>
+              </div>
+            </li>
+
+            <li class="why-item" data-aos="fade-up" data-aos-delay="320">
+              <div class="why-dot dot-indigo" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <div class="why-copy">
+                <strong class="why-item-title">Design that converts</strong>
+                <p class="muted">Human-centred UX and brand-forward UI that guide users to take action with minimum friction.</p>
+              </div>
+            </li>
+
+            <li class="why-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="why-dot dot-slate" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <div class="why-copy">
+                <strong class="why-item-title">Reliable support</strong>
+                <p class="muted">Maintenance, security and fast turnarounds so your site stays healthy while you focus on business.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="why-cta" data-aos="zoom-in" data-aos-delay="520">
+            <a class="btn-orange" href="#contact" style="text-decoration: none;">Talk to our team</a>
+          </div>
+        </div>
+
+        <!-- RIGHT: illustration anchored bottom-right -->
+        <div class="why-art" aria-hidden="true" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="200">
+          <img src="/img/choose.png" alt="Team collaborating on web project" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Featured Projects (drop-in) ===== -->
+    <section class="projects-section container-xl" id="featured-projects"
+             data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+      <div class="projects-header" data-aos="fade-right" data-aos-delay="100">
+        <span class="about-chip">Featured</span>
+        <h2>Selected Projects — proven results</h2>
+        <p class="projects-sub">Click any card to view a full, scrollable screenshot of the live project.</p>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- PROJECT 1 -->
+        <article class="project-card" tabindex="0"
+                 data-full="/img/projects/project1.jpg"
+                 data-thumb="/img/projects/proj1.jpg"
+                 data-title="Kenz Naturals — E-commerce"
+                 data-aos="flip-up" data-aos-delay="140">
+          <div class="project-tile tile-1">
+            <img class="project-thumb" src="/img/projects/proj1.jpg" alt="Kenz Naturals thumbnail">
+            <div class="project-tag">E-commerce</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Zamurban</h3>
+            <p class="project-desc">A modern style landing page for a clothing brand named zamurban.</p>
+            <div class="project-meta">
+              <span class="meta-chip">Branding</span>
+              <span class="meta-chip">UX</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 2 -->
+        <article class="project-card" tabindex="0"
+                 data-full="/img/projects/project2.jpg"
+                 data-thumb="/img/projects/proj2.jpg"
+                 data-title="Amna Foods — Brand & Store"
+                 data-aos="flip-up" data-aos-delay="220">
+          <div class="project-tile tile-2">
+            <img class="project-thumb" src="/img/projects/proj2.jpg" alt="Amna Foods thumbnail">
+            <div class="project-tag">Local Brand</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Amna Foods</h3>
+            <p class="project-desc">bA rand-forward landing page for a food manufacturing and distribution business named Amna Foods</p>
+            <div class="project-meta">
+              <span class="meta-chip">Branding</span>
+              <span class="meta-chip">SEO</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 3 -->
+        <article class="project-card" tabindex="0"
+                 data-full="/img/projects/project3.jpg"
+                 data-thumb="/img/projects/proj3.jpg"
+                 data-title="Voltora — Agency Website"
+                 data-aos="flip-up" data-aos-delay="300">
+          <div class="project-tile tile-3">
+            <img class="project-thumb" src="/img/projects/proj3.jpg" alt="Voltora thumbnail">
+            <div class="project-tag">Agency</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Kenz Naturals</h3>
+            <p class="project-desc">Modern landing page for a premium honey brand named kenz naturals.</p>
+            <div class="project-meta">
+              <span class="meta-chip">branding</span>
+              <span class="meta-chip">Performance</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 4 -->
+        <article class="project-card" tabindex="0"
+                 data-full="/img/projects/project4.png"
+                 data-thumb="/img/projects/proj4.jpg"
+                 data-title="Bismark — Dashboard"
+                 data-aos="flip-up" data-aos-delay="380">
+          <div class="project-tile tile-4">
+            <img class="project-thumb" src="/img/projects/proj4.png" alt="QuickSaaS thumbnail">
+            <div class="project-tag">SaaS</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Bismark</h3>
+            <p class="project-desc">A professional business website for an international business named bismark</p>
+            <div class="project-meta">
+              <span class="meta-chip">Branding</span>
+              <span class="meta-chip">seo</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Modal (single reusable modal with small close button) -->
+    <div id="projectLightbox" class="project-lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="pl-overlay" data-close></div>
+
+      <div class="pl-panel" role="document">
+        <button class="pl-close" aria-label="Close (Esc)" data-close>&times;</button>
+
+        <div class="pl-content">
+          <!-- This container scrolls vertically to allow full-page screenshot viewing -->
+          <div class="pl-scroll">
+            <img id="plImage" src="" alt="Full project screenshot" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Contact (simple action buttons) ===== -->
+    <section class="contact-section container-xl" id="contact"
+             data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+      <div class="contact-card">
+
+        <!-- LEFT: headline + actions -->
+        <div class="contact-left" data-aos="fade-right" data-aos-delay="120">
+          <span class="about-chip">Contact</span>
+
+          <h2 class="contact-title">Let’s build your next website — quick chat or a quote</h2>
+          <p class="contact-sub">
+            Want a new site, redesign, or a performance audit? Use any quick action below and we’ll respond fast.
+          </p>
+
+          <div class="contact-actions" role="group" aria-label="Contact actions" data-aos="fade-up" data-aos-delay="200">
+            <a id="waBtn" class="action-btn wa" href="https://wa.me/+919605052796" target="_blank" rel="noopener" aria-label="Message on WhatsApp">
+              <!-- WhatsApp SVG -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12.05a9 9 0 10-2.62 6.16L22 22l-2.86-0.75A8.96 8.96 0 0021 12.05z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.2 14.2c-.35.98-1.03 1.83-1.93 2.45l-.6.43c-.5.36-1.2.31-1.65-.13l-1.08-1.08c-.45-.45-.5-1.14-.14-1.64l.44-.6c.62-.9 1.47-1.58 2.45-1.93.24-.09.5-.05.7.11l1.06.8c.16.12.24.33.21.53z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>WhatsApp</span>
+            </a>
+
+            <a id="gmailBtn" class="action-btn mail" href="mailto:junu2727@gmail.com" target="_blank" rel="noopener" aria-label="Compose email in Gmail">
+              <!-- Gmail SVG -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7.5v9A2.5 2.5 0 0 0 5.5 19h13A2.5 2.5 0 0 0 21 16.5v-9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 7.5l8.5 5L20 7.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Gmail</span>
+            </a>
+
+            <a id="phoneBtn" class="action-btn call" href="tel:+919605052796" aria-label="Call phone">
+              <!-- Phone SVG -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.91 19.91 0 0 1-8.63-3.11 19.5 19.5 0 0 1-6-6A19.91 19.91 0 0 1 2.08 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72c.12.99.4 1.95.84 2.84a2 2 0 0 1-.45 2.11L8.91 10.91a15.06 15.06 0 0 0 6 6l1.24-1.24a2 2 0 0 1 2.11-.45c.9.44 1.85.72 2.84.84A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Call</span>
+            </a>
+          </div>
+
+          <div class="contact-meta" data-aos="fade-up" data-aos-delay="320" >
+            <div><strong>Email</strong>: <a id="staticEmail" href="mailto:hello@voltora.com" style="text-decoration: none !important;">hello@voltora.com</a></div>
+            <div><strong>Phone</strong>: <a id="staticPhone" href="tel:+919605052796" style="text-decoration: none !important;">+91 9605052796</a></div>
+          </div>
+        </div>
+
+        <!-- RIGHT: decorative rings + avatars -->
+        <div class="contact-right" aria-hidden="true" data-aos="fade-left" data-aos-delay="180">
+          <div class="rings" role="presentation">
+            <div class="ring-dot avatar" style="--x:78%; --y:22%;">
+              <img src="/img/about3.png" alt="" />
+            </div>
+
+            <div class="ring-dot avatar" style="--x:20%; --y:40%;">
+              <img src="/img/about2.png" alt="" />
+            </div>
+
+            <div class="ring-dot avatar" style="--x:62%; --y:68%;">
+              <img src="/img/about1.png" alt="" />
+            </div>
+
+            <div class="ring-dot small" style="--x:12%; --y:14%;"></div>
+            <div class="ring-dot small" style="--x:90%; --y:84%;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="about-footer">
+        <small>© 2025 Voltora Solutions. All rights reserved.</small>
+      </div>
+    </section>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 900,
+        once: true,
+        easing: 'ease-out-cubic',
+        mirror: false,
+        anchorPlacement: 'top-bottom'
+      });
+    </script>
+
+    <!-- Project lightbox & behavior script (unchanged, kept below AOS init) -->
+    <script>
+    (function () {
+      const lightbox = document.getElementById('projectLightbox');
+      const overlayCloseBtns = Array.from(lightbox.querySelectorAll('[data-close]'));
+      const plImage = document.getElementById('plImage');
+      let lastFocusedCard = null;
+
+      function openLightbox(imageSrc, title, triggeringCard) {
+        plImage.src = imageSrc;
+        plImage.alt = title || 'Project screenshot';
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        lastFocusedCard = triggeringCard || document.activeElement;
+
+        // focus close button
+        const closeBtn = lightbox.querySelector('.pl-close');
+        closeBtn.focus();
+
+        // prevent body scroll while modal open
+        document.documentElement.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        plImage.src = ''; // release image
+        document.documentElement.style.overflow = '';
+        // restore focus
+        if (lastFocusedCard) lastFocusedCard.focus();
+      }
+
+      // click handlers for project cards
+      document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const full = card.dataset.full;
+          const title = card.dataset.title || card.querySelector('.project-name')?.textContent || 'Project';
+          if (full) openLightbox(full, title, card);
+        });
+        // keyboard open with Enter/Space
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            card.click();
+          }
+        });
+      });
+
+      // overlay & close buttons
+      overlayCloseBtns.forEach(el => el.addEventListener('click', closeLightbox));
+
+      // close on ESC
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
+          closeLightbox();
+        }
+      });
+
+      // close when clicking outside panel (overlay)
+      lightbox.querySelector('.pl-overlay').addEventListener('click', closeLightbox);
+
+      // prevent click inside panel from closing
+      lightbox.querySelector('.pl-panel').addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    })();
+    </script>
+      <!-- Bootstrap JS (only for components if needed) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
